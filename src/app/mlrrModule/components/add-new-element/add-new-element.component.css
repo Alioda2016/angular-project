@@ -1,0 +1,14 @@
+button:disabled {
+  cursor: not-allowed;
+  color: grey;
+}
+
+.actions-bar > button {
+  color: #ffffff;
+  background-color: #673ab7;
+}
+
+.item-label {
+  padding: 17px;
+}
+

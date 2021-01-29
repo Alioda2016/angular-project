@@ -1,0 +1,1050 @@
+
+<!-- <form> -->
+    <!-- Row 1 -->
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Party KYC</span>
+
+  </mat-toolbar-row>
+</mat-toolbar>
+    
+        <mat-form-field>
+            <mat-label>PARTY_KEY</mat-label>
+            <input matInput [(ngModel)]="party.party_KEY" placeholder="PARTY_KEY" >
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>PARTY_NUMBER</mat-label>
+            <input matInput [(ngModel)]="party.party_NUMBER" placeholder="PARTY_NUMBER">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>PARTY_TYPE_DESC</mat-label>
+            <input matInput [(ngModel)]="party.party_TYPE_DESC" placeholder="PARTY_TYPE_DESC">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>PARTY_TAX_ID</mat-label>
+            <input matInput [(ngModel)]="party.party_TAX_ID" placeholder="PARTY_TAX_ID">
+        </mat-form-field>
+    
+
+    <!-- Row 2 -->
+
+        <mat-form-field>
+            <mat-label>PARTY_IDENTIFICATION_ID</mat-label>
+            <input matInput [(ngModel)]="party.party_IDENTIFICATION_ID" placeholder="PARTY_IDENTIFICATION_ID">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>PARTY_IDENTIFICATION_TYPE_DESC</mat-label>
+            <input matInput [(ngModel)]="party.party_IDENTIFICATION_TYPE_DESC" placeholder="PARTY_IDENTIFICATION_TYPE_DESC">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>PARTY_ID_STATE_CODE</mat-label>
+            <input matInput [(ngModel)]="party.party_ID_STATE_CODE" placeholder="PARTY_ID_STATE_CODE">
+        </mat-form-field>
+    
+
+    <!-- Row 3 -->
+    
+        <mat-form-field>
+            <mat-label>PARTY_ID_COUNTRY_CODE</mat-label>
+            <input matInput [(ngModel)]="party.party_ID_COUNTRY_CODE" placeholder="PARTY_ID_COUNTRY_CODE">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>PARTY_DATE_OF_BIRTH</mat-label>
+            <input matInput [matDatepicker]="party_DATE_OF_BIRTH" [(ngModel)]="party.party_DATE_OF_BIRTH" placeholder="PARTY_DATE_OF_BIRTH">
+            <mat-datepicker-toggle matSuffix [for]="party_DATE_OF_BIRTH"></mat-datepicker-toggle>
+            <mat-datepicker #party_DATE_OF_BIRTH></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>PARTY_FIRST_NAME</mat-label>
+            <input matInput [(ngModel)]="party.party_FIRST_NAME" placeholder="PARTY_FIRST_NAME">
+        </mat-form-field>
+        
+        <mat-form-field>
+            <mat-label>PARTY_LAST_NAME</mat-label>
+            <input matInput [(ngModel)]="party.party_LAST_NAME" placeholder="PARTY_LAST_NAME">
+        </mat-form-field>
+    
+
+    <!-- Row 4 -->
+    
+        <mat-form-field>
+            <mat-label>PARTY_MIDDLE_NAME</mat-label>
+            <input matInput [(ngModel)]="party.party_MIDDLE_NAME" placeholder="PARTY_MIDDLE_NAME">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>PARTY_NAME</mat-label>
+            <input matInput [(ngModel)]="party.party_NAME" placeholder="PARTY_NAME">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>DOING_BUSINESS_AS_NAME</mat-label>
+            <input matInput [(ngModel)]="party.doing_BUSINESS_AS_NAME" placeholder="DOING_BUSINESS_AS_NAME">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>PARTY_STATUS_DESC</mat-label>
+            <input matInput [(ngModel)]="party.party_STATUS_DESC" placeholder="PARTY_STATUS_DESC">
+        </mat-form-field>
+    
+
+    <!-- Row 5 -->
+    
+        <mat-form-field>
+            <mat-label>MATCH_CODE_INDIVIDUAL</mat-label>
+            <input matInput [(ngModel)]="party.match_CODE_INDIVIDUAL" placeholder="MATCH_CODE_INDIVIDUAL">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>MATCH_CODE_ORGANIZATION</mat-label>
+            <input matInput [(ngModel)]="party.match_CODE_ORGANIZATION" placeholder="MATCH_CODE_ORGANIZATION">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>MATCH_CODE_STREET_ADDRESS</mat-label>
+            <input matInput [(ngModel)]="party.match_CODE_STREET_ADDRESS" placeholder="MATCH_CODE_STREET_ADDRESS">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>MATCH_CODE_MAILING_ADDRESS</mat-label>
+            <input matInput [(ngModel)]="party.match_CODE_MAILING_ADDRESS" placeholder="MATCH_CODE_MAILING_ADDRESS">
+        </mat-form-field>
+    
+
+    <!-- Row 6 -->
+    
+        <mat-form-field>
+            <mat-label>MATCH_CODE_STREET_ADDR_LINES</mat-label>
+            <input matInput [(ngModel)]="party.match_CODE_STREET_ADDR_LINES" placeholder="MATCH_CODE_STREET_ADDR_LINES">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>MATCH_CODE_STREET_CITY</mat-label>
+            <input matInput [(ngModel)]="party.match_CODE_STREET_CITY" placeholder="MATCH_CODE_STREET_CITY">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>MATCH_CODE_STREET_STATE</mat-label>
+            <input matInput [(ngModel)]="party.match_CODE_STREET_STATE" placeholder="MATCH_CODE_STREET_STATE">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>MATCH_CODE_STREET_COUNTRY</mat-label>
+            <input matInput [(ngModel)]="party.match_CODE_STREET_COUNTRY" placeholder="MATCH_CODE_STREET_COUNTRY">
+        </mat-form-field>
+    
+
+    <!-- Row 7 -->
+    
+        <mat-form-field>
+            <mat-label>MATCH_CODE_MAILING_ADDR_LINES</mat-label>
+            <input matInput [(ngModel)]="party.match_CODE_MAILING_ADDR_LINES" placeholder="MATCH_CODE_MAILING_ADDR_LINES">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>MATCH_CODE_MAILING_CITY</mat-label>
+            <input matInput [(ngModel)]="party.match_CODE_MAILING_CITY" placeholder="MATCH_CODE_MAILING_CITY">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>MATCH_CODE_MAILING_STATE</mat-label>
+            <input matInput [(ngModel)]="party.match_CODE_MAILING_STATE" placeholder="MATCH_CODE_MAILING_STATE">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>MATCH_CODE_MAILING_COUNTRY</mat-label>
+            <input matInput [(ngModel)]="party.match_CODE_MAILING_COUNTRY" placeholder="MATCH_CODE_MAILING_COUNTRY">
+        </mat-form-field>
+    
+
+    <!-- Row 8 -->
+    
+        <mat-form-field>
+            <mat-label>STREET_ADDRESS_1</mat-label>
+            <input matInput [(ngModel)]="party.street_ADDRESS_1" placeholder="STREET_ADDRESS_1">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>STREET_ADDRESS_2</mat-label>
+            <input matInput [(ngModel)]="party.street_ADDRESS_2" placeholder="STREET_ADDRESS_2">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>STREET_CITY_NAME</mat-label>
+            <input matInput [(ngModel)]="party.street_CITY_NAME" placeholder="STREET_CITY_NAME">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>STREET_STATE_CODE</mat-label>
+            <input matInput [(ngModel)]="party.street_STATE_CODE" placeholder="STREET_STATE_CODE">
+        </mat-form-field>
+    
+
+    <!-- Row 9 -->
+    
+        <mat-form-field>
+            <mat-label>STREET_STATE_NAME</mat-label>
+            <input matInput [(ngModel)]="party.street_STATE_NAME" placeholder="STREET_STATE_NAME">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>STREET_POSTAL_CODE</mat-label>
+            <input matInput [(ngModel)]="party.street_POSTAL_CODE" placeholder="STREET_POSTAL_CODE">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>STREET_COUNTRY_CODE</mat-label>
+            <input matInput [(ngModel)]="party.street_COUNTRY_CODE" placeholder="STREET_COUNTRY_CODE">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>STREET_COUNTRY_NAME</mat-label>
+            <input matInput [(ngModel)]="party.street_COUNTRY_NAME" placeholder="STREET_COUNTRY_NAME">
+        </mat-form-field>
+    
+
+    <!-- Row 10 -->
+    
+        <mat-form-field>
+            <mat-label>MAILING_ADDRESS_1</mat-label>
+            <input matInput [(ngModel)]="party.mailing_ADDRESS_1" placeholder="MAILING_ADDRESS_1">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>MAILING_ADDRESS_2</mat-label>
+            <input matInput [(ngModel)]="party.mailing_ADDRESS_2" placeholder="MAILING_ADDRESS_2">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>MAILING_CITY_NAME</mat-label>
+            <input matInput [(ngModel)]="party.mailing_CITY_NAME" placeholder="MAILING_CITY_NAME">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>MAILING_STATE_CODE</mat-label>
+            <input matInput [(ngModel)]="party.mailing_STATE_CODE" placeholder="MAILING_STATE_CODE">
+        </mat-form-field>
+    
+
+    <!-- Row 11 -->
+    
+        <mat-form-field>
+            <mat-label>MAILING_STATE_NAME</mat-label>
+            <input matInput [(ngModel)]="party.mailing_STATE_NAME" placeholder="MAILING_STATE_NAME">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>MAILING_POSTAL_CODE</mat-label>
+            <input matInput [(ngModel)]="party.mailing_POSTAL_CODE" placeholder="MAILING_POSTAL_CODE">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>MAILING_COUNTRY_CODE</mat-label>
+            <input matInput [(ngModel)]="party.mailing_COUNTRY_CODE" placeholder="MAILING_COUNTRY_CODE">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>MAILING_COUNTRY_NAME</mat-label>
+            <input matInput [(ngModel)]="party.mailing_COUNTRY_NAME" placeholder="MAILING_COUNTRY_NAME">
+        </mat-form-field>
+    
+
+    <!-- Row 12 -->
+    
+        <mat-form-field>
+            <mat-label>RESIDENCE_COUNTRY_CODE</mat-label>
+            <input matInput [(ngModel)]="party.residence_COUNTRY_CODE" placeholder="RESIDENCE_COUNTRY_CODE">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>RESIDENCE_COUNTRY_NAME</mat-label>
+            <input matInput [(ngModel)]="party.residence_COUNTRY_NAME" placeholder="RESIDENCE_COUNTRY_NAME">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>CITIZENSHIP_COUNTRY_CODE</mat-label>
+            <input matInput [(ngModel)]="party.citizenship_COUNTRY_CODE" placeholder="CITIZENSHIP_COUNTRY_CODE">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>CITIZENSHIP_COUNTRY_NAME</mat-label>
+            <input matInput [(ngModel)]="party.citizenship_COUNTRY_NAME" placeholder="CITIZENSHIP_COUNTRY_NAME">
+        </mat-form-field>
+    
+
+    <!-- Row 13 -->
+    
+        <mat-form-field>
+            <mat-label>ORG_COUNTRY_OF_BUSINESS_CODE</mat-label>
+            <input matInput [(ngModel)]="party.org_COUNTRY_OF_BUSINESS_CODE" placeholder="ORG_COUNTRY_OF_BUSINESS_CODE">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>ORG_COUNTRY_OF_BUSINESS_NAME</mat-label>
+            <input matInput [(ngModel)]="party.org_COUNTRY_OF_BUSINESS_NAME" placeholder="ORG_COUNTRY_OF_BUSINESS_NAME">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>EMPLOYEE_NUMBER</mat-label>
+            <input matInput [(ngModel)]="party.employee_NUMBER" placeholder="EMPLOYEE_NUMBER">
+        </mat-form-field>
+    
+
+    <!-- Row 14 -->
+    
+        <mat-form-field>
+            <mat-label>EMPLOYER_NAME</mat-label>
+            <input matInput [(ngModel)]="party.employer_NAME" placeholder="EMPLOYER_NAME">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>EMPLOYER_PHONE_NUMBER</mat-label>
+            <input matInput [(ngModel)]="party.employer_PHONE_NUMBER" placeholder="EMPLOYER_PHONE_NUMBER">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>EMAIL_ADDRESS</mat-label>
+            <input matInput [(ngModel)]="party.email_ADDRESS" placeholder="EMAIL_ADDRESS">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>OCCUPATION_DESC</mat-label>
+            <input matInput [(ngModel)]="party.occupation_DESC" placeholder="OCCUPATION_DESC">
+        </mat-form-field>
+    
+
+    <!-- Row 15 -->
+    
+        <mat-form-field>
+            <mat-label>INDUSTRY_CODE</mat-label>
+            <input matInput [(ngModel)]="party.industry_CODE" placeholder="INDUSTRY_CODE">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>INDUSTRY_CODE_RR</mat-label>
+            <input matInput [(ngModel)]="party.industry_CODE_RR" placeholder="INDUSTRY_CODE_RR">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>INDUSTRY_DESC</mat-label>
+            <input matInput [(ngModel)]="party.industry_DESC" placeholder="INDUSTRY_DESC">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>PHONE_NUMBER_1</mat-label>
+            <input matInput [(ngModel)]="party.phone_NUMBER_1" placeholder="PHONE_NUMBER_1">
+        </mat-form-field>
+    
+
+    <!-- Row 16 -->
+    
+        <mat-form-field>
+            <mat-label>PHONE_NUMBER_2</mat-label>
+            <input matInput [(ngModel)]="party.phone_NUMBER_2" placeholder="PHONE_NUMBER_2">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>PHONE_NUMBER_3</mat-label>
+            <input matInput [(ngModel)]="party.phone_NUMBER_3" placeholder="PHONE_NUMBER_3">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>ANNUAL_INCOME_AMOUNT</mat-label>
+            <input matInput [(ngModel)]="party.annual_INCOME_AMOUNT" placeholder="SANNUAL_INCOME_AMOUNT">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>NET_WORTH_AMOUNT</mat-label>
+            <input matInput [(ngModel)]="party.net_WORTH_AMOUNT" placeholder="NET_WORTH_AMOUNT">
+        </mat-form-field>
+    
+
+    <!-- Row 17 -->
+    
+        <mat-form-field>
+            <mat-label>MARITAL_STATUS_DESC</mat-label>
+            <input matInput [(ngModel)]="party.marital_STATUS_DESC" placeholder="MARITAL_STATUS_DESC">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>LAST_CONTACT_DATE</mat-label>
+            <input matInput [matDatepicker]="LAST_CONTACT_DATE" [(ngModel)]="party.last_CONTACT_DATE" placeholder="LAST_CONTACT_DATE">
+            <mat-datepicker-toggle matSuffix [for]="LAST_CONTACT_DATE"></mat-datepicker-toggle>
+            <mat-datepicker #LAST_CONTACT_DATE></mat-datepicker>
+        </mat-form-field>
+    
+
+    <!-- Row 18 -->
+    
+        <mat-form-field>
+            <mat-label>CUSTOMER_SINCE_DATE</mat-label>
+            <input matInput [matDatepicker]="CUSTOMER_SINCE_DATE" [(ngModel)]="party.customer_SINCE_DATE" placeholder="CUSTOMER_SINCE_DATE">
+            <mat-datepicker-toggle matSuffix [for]="CUSTOMER_SINCE_DATE"></mat-datepicker-toggle>
+            <mat-datepicker #CUSTOMER_SINCE_DATE></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>LAST_SUSP_ACTV_RPT_DATE</mat-label>
+            <input matInput [matDatepicker]="LAST_SUSP_ACTV_RPT_DATE" [(ngModel)]="party.last_SUSP_ACTV_RPT_DATE" placeholder="LAST_SUSP_ACTV_RPT_DATE">
+            <mat-datepicker-toggle matSuffix [for]="LAST_SUSP_ACTV_RPT_DATE"></mat-datepicker-toggle>
+            <mat-datepicker #LAST_SUSP_ACTV_RPT_DATE></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>LAST_CASH_TRANS_RPT_DATE</mat-label>
+            <input matInput [matDatepicker]="LAST_CASH_TRANS_RPT_DATE" [(ngModel)]="party.last_CASH_TRANS_RPT_DATE" placeholder="LAST_CASH_TRANS_RPT_DATE">
+            <mat-datepicker-toggle matSuffix [for]="LAST_CASH_TRANS_RPT_DATE"></mat-datepicker-toggle>
+            <mat-datepicker #LAST_CASH_TRANS_RPT_DATE></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>LAST_RISK_ASSESSMENT_DATE</mat-label>
+            <input matInput [matDatepicker]="LAST_RISK_ASSESSMENT_DATE" [(ngModel)]="party.last_RISK_ASSESSMENT_DATE" placeholder="LAST_RISK_ASSESSMENT_DATE">
+            <mat-datepicker-toggle matSuffix [for]="LAST_RISK_ASSESSMENT_DATE"></mat-datepicker-toggle>
+            <mat-datepicker #LAST_RISK_ASSESSMENT_DATE></mat-datepicker>
+        </mat-form-field>
+    
+
+    <!-- Row 19 -->
+    
+        <mat-form-field>
+            <mat-label>RISK_CLASSIFICATION</mat-label>
+            <input matInput [(ngModel)]="party.risk_CLASSIFICATION" placeholder="RISK_CLASSIFICATION">
+        </mat-form-field>
+        
+        <!-- Date Field -->
+        <mat-form-field>
+            <mat-label>CHANGE_BEGIN_DATE</mat-label>
+            <input matInput [matDatepicker]="CHANGE_BEGIN_DATE" [(ngModel)]="party.change_BEGIN_DATE" placeholder="CHANGE_BEGIN_DATE">
+            <mat-datepicker-toggle matSuffix [for]="CHANGE_BEGIN_DATE"></mat-datepicker-toggle>
+            <mat-datepicker #CHANGE_BEGIN_DATE></mat-datepicker>
+       </mat-form-field>
+
+        <!-- Date Field -->
+        <mat-form-field>
+            <mat-label>CHANGE_END_DATE</mat-label>
+            <input matInput [matDatepicker]="CHANGE_END_DATE" [(ngModel)]="party.change_END_DATE" placeholder="CHANGE_END_DATE">
+            <mat-datepicker-toggle matSuffix [for]="CHANGE_END_DATE"></mat-datepicker-toggle>
+            <mat-datepicker #CHANGE_END_DATE></mat-datepicker>
+       </mat-form-field>
+    
+
+    <!-- Row 20 -->
+    
+        <mat-form-field>
+            <mat-label>LEGAL_ENTITY_TYPE</mat-label>
+            <input matInput [(ngModel)]="party.legal_ENTITY_TYPE" placeholder="LEGAL_ENTITY_TYPE">
+        </mat-form-field>
+    
+
+    <!-- Row 23 -->
+    
+        <mat-form-field>
+            <mat-label>SUSP_ACTV_RPT_COUNT</mat-label>
+            <input matInput [(ngModel)]="party.susp_ACTV_RPT_COUNT" placeholder="SUSP_ACTV_RPT_COUNT">
+        </mat-form-field>
+
+        <!-- Date Field -->
+        <mat-form-field>
+            <mat-label>LST_UPDATE_DATE</mat-label>
+            <input matInput [matDatepicker]="LST_UPDATE_DATE" [(ngModel)]="party.lst_UPDATE_DATE" placeholder="LST_UPDATE_DATE">
+            <mat-datepicker-toggle matSuffix [for]="LST_UPDATE_DATE"></mat-datepicker-toggle>
+            <mat-datepicker #LST_UPDATE_DATE></mat-datepicker>
+       </mat-form-field>
+    
+
+    <!-- Row 24 -->
+    
+        <mat-form-field>
+            <mat-label>EN_PARTY_FIRST_NAME</mat-label>
+            <input matInput [(ngModel)]="party.en_PARTY_FIRST_NAME" placeholder="EN_PARTY_FIRST_NAME">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>EN_PARTY_LAST_NAME</mat-label>
+            <input matInput [(ngModel)]="party.en_PARTY_LAST_NAME" placeholder="EN_PARTY_LAST_NAME">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>EN_PARTY_THIRD_NAME</mat-label>
+            <input matInput [(ngModel)]="party.en_PARTY_THIRD_NAME" placeholder="EN_PARTY_THIRD_NAME">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>EN_PARTY_MIDDLE_NAME</mat-label>
+            <input matInput [(ngModel)]="party.en_PARTY_MIDDLE_NAME" placeholder="EN_PARTY_MIDDLE_NAME">
+        </mat-form-field>
+    
+
+    <!-- Row 25 -->
+    
+        <mat-form-field>
+            <mat-label>EN_PARTY_NAME</mat-label>
+            <input matInput [(ngModel)]="party.en_PARTY_NAME" placeholder="EN_PARTY_NAME">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>PASSPORT_COUNTRY</mat-label>
+            <input matInput [(ngModel)]="party.passport_COUNTRY" placeholder="PASSPORT_COUNTRY">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>PARTY_FATHER_NAME</mat-label>
+            <input matInput [(ngModel)]="party.party_FATHER_NAME" placeholder="PARTY_FATHER_NAME">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>ADDRESS_TYPE</mat-label>
+            <input matInput [(ngModel)]="party.address_TYPE" placeholder="ADDRESS_TYPE">
+        </mat-form-field>
+    
+
+    <!-- Row 26 -->
+    
+        <mat-form-field>
+            <mat-label>ADDRESS_TOWN</mat-label>
+            <input matInput [(ngModel)]="party.address_TOWN" placeholder="ADDRESS_TOWN">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>ADDRESS_COMMENTS</mat-label>
+            <input matInput [(ngModel)]="party.address_COMMENTS" placeholder="ADDRESS_COMMENTS">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>OCCUPATION_CODE</mat-label>
+            <input matInput [(ngModel)]="party.occupation_CODE" placeholder="OCCUPATION_CODE">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>GENDER</mat-label>
+            <input matInput [(ngModel)]="party.gender" placeholder="GENDER">
+        </mat-form-field>
+    
+
+    <!-- Row 27 -->
+    
+        <mat-form-field>
+            <mat-label>TITLE</mat-label>
+            <input matInput [(ngModel)]="party.title" placeholder="TITLE">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>BIRTH_PLACE</mat-label>
+            <input matInput [(ngModel)]="party.birth_PLACE" placeholder="BIRTH_PLACE">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>MOTHERS_NAME</mat-label>
+            <input matInput [(ngModel)]="party.mothers_NAME" placeholder="MOTHERS_NAME">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>ALIAS</mat-label>
+            <input matInput [(ngModel)]="party.alias" placeholder="ALIAS">
+        </mat-form-field>
+    
+
+    <!-- Row 28 -->
+    
+        <mat-form-field>
+            <mat-label>NATIONALITY2</mat-label>
+            <input matInput [(ngModel)]="party.nationality2" placeholder="NATIONALITY2">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>NATIONALITY3</mat-label>
+            <input matInput [(ngModel)]="party.nationality3" placeholder="NATIONALITY3">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>TPH_CONTACT_TYPE_1</mat-label>
+            <input matInput [(ngModel)]="party.tph_CONTACT_TYPE_1" placeholder="TPH_CONTACT_TYPE_1">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>TPH_COMMUNICATION_TYPE_1</mat-label>
+            <input matInput [(ngModel)]="party.tph_COMMUNICATION_TYPE_1" placeholder="TPH_COMMUNICATION_TYPE_1">
+        </mat-form-field>
+    
+
+    <!-- Row 29 -->
+    
+        <mat-form-field>
+            <mat-label>TPH_COUNTRY_PREFIX_1</mat-label>
+            <input matInput [(ngModel)]="party.tph_COUNTRY_PREFIX_1" placeholder="TPH_COUNTRY_PREFIX_1">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>TPH_EXTENSION_1</mat-label>
+            <input matInput [(ngModel)]="party.tph_EXTENSION_1" placeholder="TPH_EXTENSION_1">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>TPH_COMMENTS_1</mat-label>
+            <input matInput [(ngModel)]="party.tph_COMMENTS_1" placeholder="TPH_COMMENTS_1">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>TPH_CONTACT_TYPE_2</mat-label>
+            <input matInput [(ngModel)]="party.tph_CONTACT_TYPE_2" placeholder="TPH_CONTACT_TYPE_2">
+        </mat-form-field>
+    
+
+    <!-- Row 30 -->
+    
+        <mat-form-field>
+            <mat-label>TPH_COMMUNICATION_TYPE_2</mat-label>
+            <input matInput [(ngModel)]="party.tph_COMMUNICATION_TYPE_2" placeholder="TPH_COMMUNICATION_TYPE_2">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>TPH_COUNTRY_PREFIX_2</mat-label>
+            <input matInput [(ngModel)]="party.tph_COUNTRY_PREFIX_2" placeholder="TPH_COUNTRY_PREFIX_2">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>TPH_EXTENSION_2</mat-label>
+            <input matInput [(ngModel)]="party.tph_EXTENSION_2" placeholder="TPH_EXTENSION_2">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>TPH_COMMENTS_2</mat-label>
+            <input matInput [(ngModel)]="party.tph_COMMENTS_2" placeholder="TPH_COMMENTS_2">
+        </mat-form-field>
+    
+
+
+     <!-- Row 31 -->
+     
+        <mat-form-field>
+            <mat-label>TPH_CONTACT_TYPE_3</mat-label>
+            <input matInput [(ngModel)]="party.tph_CONTACT_TYPE_3" placeholder="TPH_CONTACT_TYPE_3">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>TPH_COMMUNICATION_TYPE_3</mat-label>
+            <input matInput [(ngModel)]="party.tph_COMMUNICATION_TYPE_3" placeholder="TPH_COMMUNICATION_TYPE_3">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>TPH_COUNTRY_PREFIX_3</mat-label>
+            <input matInput [(ngModel)]="party.tph_COUNTRY_PREFIX_3" placeholder="TPH_COUNTRY_PREFIX_3">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>TPH_EXTENSION_3</mat-label>
+            <input matInput [(ngModel)]="party.tph_EXTENSION_3" placeholder="TPH_EXTENSION_3">
+        </mat-form-field>
+    
+
+     <!-- Row 32 -->
+     
+        <mat-form-field>
+            <mat-label>TPH_COMMENTS_3</mat-label>
+            <input matInput [(ngModel)]="party.tph_COMMENTS_3" placeholder="TPH_COMMENTS_3">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>EMPLOYER_ADDRESS_TYPE</mat-label>
+            <input matInput [(ngModel)]="party.employer_ADDRESS_TYPE" placeholder="EMPLOYER_ADDRESS_TYPE">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>EMPLOYER_ADDRESS</mat-label>
+            <input matInput [(ngModel)]="party.employer_ADDRESS" placeholder="EMPLOYER_ADDRESSr">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>EMPLOYER_TOWN</mat-label>
+            <input matInput [(ngModel)]="party.employer_TOWN" placeholder="EMPLOYER_TOWN">
+        </mat-form-field>
+    
+
+     <!-- Row 33 -->
+     
+        <mat-form-field>
+            <mat-label>EMPLOYER_CITY</mat-label>
+            <input matInput [(ngModel)]="party.employer_CITY" placeholder="EMPLOYER_CITY">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>EMPLOYER_ZIP</mat-label>
+            <input matInput [(ngModel)]="party.employer_ZIP" placeholder="EMPLOYER_ZIP">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>EMPLOYER_COUNTRY_CODE</mat-label>
+            <input matInput [(ngModel)]="party.employer_COUNTRY_CODE" placeholder="EMPLOYER_COUNTRY_CODE">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>EMPLOYER_STATE</mat-label>
+            <input matInput [(ngModel)]="party.employer_STATE" placeholder="EMPLOYER_STATE">
+        </mat-form-field>
+    
+
+     <!-- Row 34 -->
+     
+        <mat-form-field>
+            <mat-label>EMPLOYER_ADDRESS_COMMENTS</mat-label>
+            <input matInput [(ngModel)]="party.employer_ADDRESS_COMMENTS" placeholder="EMPLOYER_ADDRESS_COMMENTS">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>EMPLOYER_CONTACT_TYPE</mat-label>
+            <input matInput [(ngModel)]="party.employer_CONTACT_TYPE" placeholder="EMPLOYER_CONTACT_TYPE">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>EMPLOYER_COMMUNICATION_TYPE</mat-label>
+            <input matInput [(ngModel)]="party.employer_COMMUNICATION_TYPE" placeholder="EMPLOYER_COMMUNICATION_TYPE">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>EMPLOYER_COUNTRY_PREFIX</mat-label>
+            <input matInput [(ngModel)]="party.employer_COUNTRY_PREFIX" placeholder="EMPLOYER_COUNTRY_PREFIX">
+        </mat-form-field>
+    
+
+     <!-- Row 35 -->
+     
+        <mat-form-field>
+            <mat-label>EMPLOYER_NUMBER</mat-label>
+            <input matInput [(ngModel)]="party.employee_NUMBER" placeholder="EMPLOYER_NUMBER">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>EMPLOYER_EXTENSION</mat-label>
+            <input matInput [(ngModel)]="party.employer_EXTENSION" placeholder="EMPLOYER_EXTENSION">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>EMPLOYER_COMMENTS</mat-label>
+            <input matInput [(ngModel)]="party.employer_COMMENTS" placeholder="EMPLOYER_COMMENTS">
+        </mat-form-field>
+
+        <!-- Date Field -->
+        <mat-form-field>
+            <mat-label>IDENT_ISSUE_DATE</mat-label>
+            <input matInput [matDatepicker]="IDENT_ISSUE_DATE" [(ngModel)]="party.ident_ISSUE_DATE" placeholder="IDENT_ISSUE_DATE">
+            <mat-datepicker-toggle matSuffix [for]="IDENT_ISSUE_DATE"></mat-datepicker-toggle>
+            <mat-datepicker #IDENT_ISSUE_DATE></mat-datepicker>
+        </mat-form-field>
+    
+
+     <!-- Row 36 -->
+     
+        <!-- Date Field -->
+        <mat-form-field>
+            <mat-label>IDENT_EXPIRY_DATE</mat-label>
+            <input matInput [matDatepicker]="IDENT_EXPIRY_DATE" [(ngModel)]="party.ident_EXPIRY_DATE" placeholder="IDENT_EXPIRY_DATE">
+            <mat-datepicker-toggle matSuffix [for]="IDENT_EXPIRY_DATE"></mat-datepicker-toggle>
+            <mat-datepicker #IDENT_EXPIRY_DATE></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>IDENT_ISSUED_BY</mat-label>
+            <input matInput [(ngModel)]="party.ident_ISSUED_BY" placeholder="IDENT_ISSUED_BY">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>IDENT_ISSUE_COUNTRY</mat-label>
+            <input matInput [(ngModel)]="party.ident_ISSUE_COUNTRY" placeholder="IDENT_ISSUE_COUNTRY">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>IDENT_COMMENTS</mat-label>
+            <input matInput [(ngModel)]="party.ident_COMMENTS" placeholder="IDENT_COMMENTS">
+        </mat-form-field>
+
+        <!-- Date Field -->
+        <mat-form-field>
+            <mat-label>DATE_DECEASED</mat-label>
+            <input matInput [matDatepicker]="DATE_DECEASED" [(ngModel)]="party.date_DECEASED" placeholder="DATE_DECEASED">
+            <mat-datepicker-toggle matSuffix [for]="DATE_DECEASED"></mat-datepicker-toggle>
+            <mat-datepicker #DATE_DECEASED></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>SOURCE_OF_WEALTH</mat-label>
+            <input matInput [(ngModel)]="party.source_OF_WEALTH" placeholder="SOURCE_OF_WEALTH">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>COMMENTS</mat-label>
+            <input matInput [(ngModel)]="party.comments" placeholder="COMMENTS">
+        </mat-form-field>
+    
+
+     <!-- Row 38 -->
+     
+        <mat-form-field>
+            <mat-label>INCORPORATION_LEGAL_FORM</mat-label>
+            <input matInput [(ngModel)]="party.incorporation_LEGAL_FORM" placeholder="INCORPORATION_LEGAL_FORM">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>URL</mat-label>
+            <input matInput [(ngModel)]="party.url" placeholder="URL">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>INCORPORATION_STATE</mat-label>
+            <input matInput [(ngModel)]="party.incorporation_STATE" placeholder="INCORPORATION_STATE">
+        </mat-form-field>
+
+        <!-- Date Field -->
+        <mat-form-field>
+            <mat-label>INCORPORATION_DATE</mat-label>
+            <input matInput [matDatepicker]="INCORPORATION_DATE" [(ngModel)]="party.incorporation_DATE" placeholder="INCORPORATION_DATE">
+            <mat-datepicker-toggle matSuffix [for]="INCORPORATION_DATE"></mat-datepicker-toggle>
+            <mat-datepicker #INCORPORATION_DATE></mat-datepicker>
+        </mat-form-field>
+
+        <!-- Date Field -->
+        <mat-form-field>
+            <mat-label>DATE_BUSINESS_CLOSED</mat-label>
+            <input matInput [matDatepicker]="DATE_BUSINESS_CLOSED" [(ngModel)]="party.date_BUSINESS_CLOSED" placeholder="DATE_BUSINESS_CLOSED">
+            <mat-datepicker-toggle matSuffix [for]="DATE_BUSINESS_CLOSED"></mat-datepicker-toggle>
+            <mat-datepicker #DATE_BUSINESS_CLOSED></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>ID_EMPLOYER_NAME</mat-label>
+            <input matInput [(ngModel)]="party.id_EMPLOYER_NAME" placeholder="ID_EMPLOYER_NAME">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>ID_OCCUPATION_DESC</mat-label>
+            <input matInput [(ngModel)]="party.id_OCCUPATION_DESC" placeholder="ID_OCCUPATION_DESC">
+        </mat-form-field>
+    
+
+     <!-- Row 40 -->
+     <!--  -->
+        <mat-form-field>
+            <mat-label>ID_NUMBER</mat-label>
+            <input matInput [(ngModel)]="party.id_NUMBER" placeholder="ID_NUMBER">
+        </mat-form-field>
+    <!--  -->
+
+     <!-- Row 41 -->
+     
+        <mat-form-field>
+            <mat-label>PARTY_MAIN_BRANCH_NUMBER</mat-label>
+            <input matInput [(ngModel)]="party.party_MAIN_BRANCH_NUMBER" placeholder="PARTY_MAIN_BRANCH_NUMBER">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>RESULT</mat-label>
+            <input matInput [(ngModel)]="party.result" placeholder="RESULT ">
+        </mat-form-field>
+
+        <!-- Date Field -->
+        <mat-form-field>
+            <mat-label>SCREENING_DATE</mat-label>
+            <input matInput [matDatepicker]="SCREENING_DATE" [(ngModel)]="party.screening_DATE" placeholder="SCREENING_DATE">
+            <mat-datepicker-toggle matSuffix [for]="SCREENING_DATE"></mat-datepicker-toggle>
+            <mat-datepicker #SCREENING_DATE></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>ERRORDESC</mat-label>
+            <input matInput [(ngModel)]="party.errordesc" placeholder="ERRORDESC">
+        </mat-form-field>
+
+     <!-- Row 42 -->
+     
+        <mat-form-field>
+            <mat-label>ENTITY_SEGMENT_ID</mat-label>
+            <input matInput [(ngModel)]="party.entity_SEGMENT_ID" placeholder="ENTITY_SEGMENT_ID">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>SEGMENT_ID</mat-label>
+            <input matInput [(ngModel)]="party.segment_ID" placeholder="SEGMENT_ID">
+        </mat-form-field>
+
+        <!-- Date Field -->
+        <mat-form-field>
+            <mat-label>PURGE_DATE</mat-label>
+            <input matInput [matDatepicker]="PURGE_DATE" [(ngModel)]="party.purge_DATE" placeholder="PURGE_DATE">
+            <mat-datepicker-toggle matSuffix [for]="PURGE_DATE"></mat-datepicker-toggle>
+            <mat-datepicker #PURGE_DATE></mat-datepicker>
+        </mat-form-field>
+    
+
+    <!-- Row 43 -->
+    
+        <mat-form-field>
+            <mat-label>SECTOR</mat-label>
+            <input matInput [(ngModel)]="party.sector" placeholder="SECTOR">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>NUMBER_OF_ACCOUNTS</mat-label>
+            <input matInput [(ngModel)]="party.number_OF_ACCOUNTS" placeholder="NUMBER_OF_ACCOUNTS">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>CUSTOMER_SINCE_YEARS</mat-label>
+            <input matInput [(ngModel)]="party.customer_SINCE_YEARS" placeholder="CUSTOMER_SINCE_YEARS">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>LAST_CONTACT_DAYS</mat-label>
+            <input matInput [(ngModel)]="party.last_CONTACT_DAYS" placeholder="LAST_CONTACT_DAYS">
+        </mat-form-field>
+    
+
+    <!-- Row 44 -->
+    
+        <mat-form-field>
+            <mat-label>PARTY_AGE_YEARS</mat-label>
+            <input matInput [(ngModel)]="party.party_AGE_YEARS" placeholder="PARTY_AGE_YEARSr">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>PARTY_STATUS</mat-label>
+            <input matInput [(ngModel)]="party.party_STATUS" placeholder="PARTY_STATUS">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>PARTY_RETAIL_LOAN_STATUS</mat-label>
+            <input matInput [(ngModel)]="party.party_RETAIL_LOAN_STATUS" placeholder="PARTY_RETAIL_LOAN_STATUS">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>PARTY_RETAIL_AUTO_LOAN_STATUS</mat-label>
+            <input matInput [(ngModel)]="party.party_RETAIL_AUTO_LOAN_STATUS" placeholder="PARTY_RETAIL_AUTO_LOAN_STATUS">
+        </mat-form-field>
+    
+
+     <!-- Row 45 -->
+     
+        <mat-form-field>
+            <mat-label>PARTY_WITH_RETAIL_MORTGAGE</mat-label>
+            <input matInput [(ngModel)]="party.party_WITH_RETAIL_MORTGAGE" placeholder="PARTY_WITH_RETAIL_MORTGAGE">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>RISK_RATING</mat-label>
+            <input matInput [(ngModel)]="party.risk_RATING" placeholder="RISK_RATING">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>PENDING_IND</mat-label>
+            <input matInput [(ngModel)]="party.pending_IND" placeholder="PENDING_IND">
+        </mat-form-field>
+    
+
+    <!-- Start Indicators Fields -->
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.employee_IND">EMPLOYEE_IND</mat-checkbox>
+      </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.politically_EXPOSED_PERSON_IND">POLITICALLY_EXPOSED_PERSON_IND</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.non_PROFIT_ORG_IND">NON_PROFIT_ORG_IND</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.change_CURRENT_IND">CHANGE_CURRENT_IND</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.external_PARTY_IND">EXTERNAL_PARTY_IND</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.money_ORDERS_IND">MONEY_ORDERS_IND</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.travelers_CHEQUES_IND">TRAVELERS_CHEQUES_IND</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.prepaid_CARDS_IND">PREPAID_CARDS_IND</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.msb_IND">MSB_IND</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.money_TRANSMITTER_IND">MONEY_TRANSMITTER_IND</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.currency_EXCHANGE_IND">CURRENCY_EXCHANGE_IND</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.check_CASHER_IND">CHECK_CASHER_IND</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.internet_GAMBLING_IND">INTERNET_GAMBLING_IND</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.trust_ACCOUNT_IND">TRUST_ACCOUNT_IND</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.foreign_CONSULATE_EMBASSY_IND">FOREIGN_CONSULATE_EMBASSY_IND</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.issues_BEARER_SHARES_IND">ISSUES_BEARER_SHARES_IND</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.negative_NEWS_IND">NEGATIVE_NEWS_IND</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.charity_DONATIONS_IND">CHARITY_DONATIONS_IND</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.gov_ORG_IND">GOV_ORG_IND</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.fatca_CUST_IND">FATCA_CUST_IND</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.ben_OWN_EXEMPT_IND">BEN_OWN_EXEMPT_IND</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.party_TAX_ID_TYPE_CODE">PARTY_TAX_ID_TYPE_CODE</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.deceased">DECEASED</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.business_CLOSED">BUSINESS_CLOSED</mat-checkbox>
+    </section>
+
+    <section class="example-section">
+        <mat-checkbox class="example-margin" [checked]="party.seg">SEG</mat-checkbox>
+    </section>
+
+    

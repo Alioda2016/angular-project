@@ -1,0 +1,66 @@
+<div class="example-container">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <div class="row top-header">
+        <button (click)="isOn=!isOn" mat-icon-button class="menu-button">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <img height="70" id="logo" src="assets/images/welcome.png" width="40">
+        <div class="WelcomeMessage last-item">
+            <span>
+              {{userName  }}
+            </span>
+        </div>
+        <div class=" notification-badge">
+          <button (click)="logout()" mat-icon-button matTooltip="Logout">
+            <img alt="" height="45" src='assets/images/logout.png' srcset="" width="45">
+          </button>
+        </div>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <mat-sidenav-container [style.marginTop.px]="0" autosize class="example-sidenav-container">
+    <mat-sidenav mode="side" opened>
+      <mat-nav-list>
+        <mat-list-item (click)="goToAbout();index=1;" [ngClass]="{'red':index==1}">
+          <mat-icon>dashboard</mat-icon>
+          <span *ngIf="isOn" class="nav-link-inner">About</span>
+        </mat-list-item>
+
+        <mat-list-item (click)="goToScaleBoundry();index=2;" [ngClass]="{'red':index==2}">
+          <mat-icon>trending_up</mat-icon>
+          <span *ngIf="isOn" class="nav-link-inner">Scaling Boundry</span>
+        </mat-list-item>
+        <mat-list-item (click)="goToDimension();index=3;" [ngClass]="{'red':index==3}">
+          <mat-icon>view_list</mat-icon>
+          <span *ngIf="isOn" class="nav-link-inner">Dimensions</span>
+
+        </mat-list-item>
+        <mat-list-item (click)="goToManualRisRating();index=4;" [ngClass]="{'red':index==4}">
+          <mat-icon>search</mat-icon>
+          <span *ngIf="isOn" class="nav-link-inner">Party Risk Management</span>
+        </mat-list-item>
+        <mat-list-item (click)="goToTurnoverAmountElements('Individual');index=5;" [ngClass]="{'red':index==5}">
+          <mat-icon>person</mat-icon>
+          <span *ngIf="isOn" class="nav-link-inner"> Turnover  Individual</span>
+        </mat-list-item>
+        <mat-list-item (click)="goToTurnoverAmountElements('Organization');index=6;" [ngClass]="{'red':index==6}">
+          <mat-icon>O</mat-icon>
+          <span *ngIf="isOn" class="nav-link-inner"> Turnover  Organization</span>
+        </mat-list-item>
+
+        <mat-list-item (click)="goToCorrelation();index=7;" [ngClass]="{'red':index==7}">
+          <mat-icon>view_module</mat-icon>
+          <span *ngIf="isOn" class="nav-link-inner">Correlations</span>
+        </mat-list-item>
+
+       
+
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

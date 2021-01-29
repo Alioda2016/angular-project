@@ -1,0 +1,59 @@
+<!-- Header Part -->
+<!-- <div class="header">
+<h1 mat-dialog-title>Results</h1>
+</div> -->
+
+<mat-toolbar>
+  <span>Display Element</span>
+  <span class="example-spacer"></span>
+</mat-toolbar>
+
+
+
+<div mat-dialog-content>
+  <!-- Party Number -->
+  <label>Party Number:
+    <mat-form-field>
+      <input matInput disabled [(ngModel)]="data.partyNumber">
+    </mat-form-field>
+  </label>
+
+  <!-- Party Name -->
+  <label>Party Name:
+    <mat-form-field>
+      <input matInput disabled [(ngModel)]="data.partyName">
+    </mat-form-field>
+  </label>
+
+  <!-- Party ID -->
+  <label>Party ID:
+    <mat-form-field>
+      <input matInput disabled [(ngModel)]="data.partyKey">
+    </mat-form-field>
+  </label>
+
+  <!-- Party Nationality -->
+  <label>Party Nationality:
+    <mat-form-field>
+      <input matInput disabled [(ngModel)]="data.nationality">
+    </mat-form-field>
+  </label>
+
+  <!-- Party Residency -->
+  <label>Party Residency:
+    <mat-form-field>
+      <input matInput disabled [(ngModel)]="data.residenceCountryName">
+    </mat-form-field>
+  </label>
+
+  <!-- Party Rate -->
+  <label>Party Rate:
+    <mat-form-field>
+      <input matInput disabled [(ngModel)]="data.riskRating">
+    </mat-form-field>
+  </label>
+
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="onNoClick()">Ok</button>
+</div>

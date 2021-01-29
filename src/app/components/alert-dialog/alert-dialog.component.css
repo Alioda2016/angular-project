@@ -1,0 +1,17 @@
+
+
+button {
+  margin: 5px;
+}
+
+.card-header{
+  font-size: 20px;
+  font-weight: bold;
+  background: #ebebeb;
+}
+
+.card-footer {
+  font-size: 20px;
+  font-weight: bold;
+  background: #ebebeb;
+}

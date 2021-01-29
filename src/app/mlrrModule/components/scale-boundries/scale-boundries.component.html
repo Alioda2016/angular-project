@@ -1,0 +1,42 @@
+
+
+<div class="container">
+  <div class="header">
+    <p> Scale Boundries </p>
+  </div>
+  <form class="needs-validation" [formGroup]="scaleBoundryFormGroup" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+
+      <!-- Max Scale -->
+      <div class="col-md-4 mb-3">
+        <label for="maxScale" class="lable">Max Scale:</label>
+        <input type="number" class="form-control" id="maxScale" placeholder="Max Scale" name="maxScale" formControlName="maxScaleControl">
+      </div>
+
+      <!-- Low Boundry -->
+      <div class="col-md-4 mb-3">
+        <label for="lowBoundry" class="lable">Low Boundry:</label>
+        <input type="number" class="form-control" id="lowBoundry" placeholder="Low Boundry" name="lowBoundry" formControlName="lowBoundryControl">
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <label for="highBoundry" class="lable">High Boundry:</label>
+        <input type="number" class="form-control" id="highBoundry" placeholder="High Boundry" name="highBoundry" formControlName="highBoundryControl">
+      </div>
+    </div>
+    
+    <div class="error-message">
+      <span *ngIf="scaleBoundryFormGroup.invalid && (scaleBoundryFormGroup.dirty || scaleBoundryFormGroup.touched)">
+        {{ scaleBoundryFormGroup.errors | json }}
+      </span>
+    </div>
+
+    <hr class="hr">
+    <div>
+      <button mat-raised-button type="submit" class="submit-btn" [disabled]="scaleBoundryFormGroup.invalid">
+        <mat-icon>arrow_circle_down</mat-icon>
+        Submit
+      </button>
+    </div>
+  </form>
+</div>

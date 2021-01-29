@@ -1,0 +1,41 @@
+<h3 mat-dialog-title> Add New Dimension:</h3>
+<div mat-dialog-content>
+  <form class="example-form" #dimensionForm="ngForm">
+    <div>
+      <mat-form-field class="full-width">
+        <input matInput [(ngModel)]="dimension.name" name="name" placeholder="Name" [readonly]="type">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="full-width">
+        <input matInput [(ngModel)]="dimension.description" name="description" placeholder="Description">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field class="full-width">
+        <input matInput [(ngModel)]="dimension.weight" name="weight" placeholder="Weight" type="number">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="full-width">
+        <mat-select [(ngModel)]="dimension.sourceColumn" name="sourceColumn" placeholder="Column Name" [disabled]="type">
+          <mat-option *ngFor="let col of columnNames" [value]="col">{{col}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+  </form>
+</div>
+
+<div mat-dialog-actions class="actions-bar">
+  <button mat-flat-button color="primary" *ngIf="!type"
+          (click)="addDimension(dimensionForm)"
+          cdkFocusInitial [mat-dialog-close]="dimensionForm.value">Add
+  </button>
+  <button mat-flat-button color="primary" *ngIf="type"
+          (click)="updateDimension()"
+          cdkFocusInitial [mat-dialog-close]="dimensionForm.value">Update
+  </button>
+  <button mat-flat-button color="warn" (click)="onNoClick()">Cancel</button>
+</div>

@@ -1,0 +1,6 @@
+flexbox
+
+https://www.w3schools.com/css/css3_mediaqueries.asp
+grid css
+
+

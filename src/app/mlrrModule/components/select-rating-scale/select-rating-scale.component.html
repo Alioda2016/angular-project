@@ -1,0 +1,9 @@
+<mat-form-field class="full-width">
+  <mat-select [(value)]="elementRate" (selectionChange)="changeRate($event)">
+    <mat-optgroup *ngFor="let group of statusGroups" [label]="group.name">
+      <mat-option *ngFor="let state of group.status" [value]="state.value">
+        {{state.viewValue}}
+      </mat-option>
+    </mat-optgroup>
+  </mat-select>
+</mat-form-field>

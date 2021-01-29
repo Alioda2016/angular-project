@@ -1,0 +1,135 @@
+/* mat-toolbar */
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0
+}
+
+
+.app-name {
+  padding-left: 8px
+}
+
+.WelcomeMessage {
+  font-size: 16px;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.notification-badge {
+  font-size: 26px;
+  font-weight: 600;
+  padding: 0
+}
+
+.mat-toolbar-row {
+  padding-left: 8px
+}
+
+.example-sidenav-container {
+  flex: 1
+}
+
+.nav-link-inner {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  font-family: Roboto, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  transition: transform 1s;
+
+}
+
+.mat-list-item:hover .nav-link-inner {
+  transform: translateX(5px)
+}
+
+
+.mat-sidenav[_ngcontent-c1][_ngcontent-c1] {
+  background: #6472bf
+}
+
+.mat-sidenav {
+  max-width: 280px;
+  font-family: Oswald;
+  background: #3f51b5;
+}
+
+.mat-nav-list .mat-list-item {
+  font-size: 18px;
+  color: #fff;
+}
+
+.mat-nav-list .mat-list-item:hover {
+  background-color: #4d5252 !important
+}
+
+.mat-nav-list .mat-list-item {
+  height: 44px
+}
+
+:host mat-nav-list {
+  padding: 0
+}
+
+.mat-list-item {
+  font-family: Oswald;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  font-weight: 400;
+  text-decoration: none;
+  line-height: 1;
+  font-size: 13px;
+  position: relative
+}
+
+.mat-divider {
+  display: block;
+  clear: both;
+  background-color: #fff;
+  opacity: .3
+}
+
+.mat-sidenav-content {
+  background-color: #e4eae6;
+  padding: 16px
+}
+
+.red {
+  background-color: orange
+}
+
+#logo {
+  height: 60px;
+  width: 270px;
+  margin-left: 8px;
+}
+
+
+.toolbarContainer {
+  display: flex;
+
+  background-color: aqua;
+  width: inherit;
+
+
+}
+
+.last-item {
+  margin-left: auto;
+}
+
+.top-header {
+  display: flex;
+  width: 100%;
+}
+.menu-button{
+  margin-left: 10px;
+}

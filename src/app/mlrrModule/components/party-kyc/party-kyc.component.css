@@ -1,0 +1,44 @@
+/*.example-container .mat-form-field + .mat-form-field {*/
+/*    margin-left: 8px;*/
+/*  }*/
+/*  */
+/*  .example-container .mat-form-field {*/
+/*    width: 220px;*/
+/*  }*/
+/*  */
+/*  .example-container form {*/
+/*    margin-bottom: 20px;*/
+/*  }*/
+/*  */
+/*  .example-container form > * {*/
+/*    margin: 5px 0;*/
+/*  }*/
+/*  */
+/*  .example-container .mat-radio-button {*/
+/*    margin: 0 12px;*/
+/*  }*/
+
+/*  .span {*/
+/*    margin-left: 8px;*/
+/*  }*/
+.example-container{
+  display:flex;
+}
+.example-container .mat-form-field{
+  flex: 1;
+  margin-left: 10px;
+  margin-top: 12px;
+}
+
+mat-form-field {
+  flex: 1;
+  margin-left: 10px;
+  margin-top: 12px;
+}
+
+.example-section {
+  margin-left: 10px;
+  margin-top: 18px;
+  display: inline-block;
+}
+

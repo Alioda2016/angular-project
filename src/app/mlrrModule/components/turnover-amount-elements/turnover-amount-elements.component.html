@@ -1,0 +1,66 @@
+<div>
+  <button (click)="addNewElementToTurnover()"
+          mat-raised-button color="primary">Add New Element
+  </button>
+</div>
+
+
+<div>
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Filter" (keyup)="applyFilter($event)" #input>
+  </mat-form-field>
+</div>
+
+<div>
+  <mat-table [dataSource]="dataSource" matSort>
+
+
+
+    <ng-container matColumnDef="threshold">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Threshold</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.threshold}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="value">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> {{headerName}}</mat-header-cell>
+      <mat-cell *matCellDef="let row">
+        {{row.elementValue}}
+      </mat-cell>
+    </ng-container>
+    <!---->
+    <ng-container matColumnDef="rate">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Rate</mat-header-cell>
+      <mat-cell *matCellDef="let row">
+        <app-select-rating-scale [elementRate]="row.rate" (changeRateEvent)="row.rate=$event"></app-select-rating-scale>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="update">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Update Rate</th>
+      <td mat-cell *matCellDef="let row;let index=index">
+        <button mat-icon-button (click)="UpdateElementRate(row, index)">
+          <mat-icon color="primary">edit</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="delete">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Delete</mat-header-cell>
+      <mat-cell *matCellDef="let row;let index=index">
+        <button mat-icon-button (click)="deleteElement(row, index)">
+          <mat-icon color="warn">delete</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns" style="background: gray;"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;">
+    </mat-row>
+
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+    </tr>
+  </mat-table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+
+</div>

@@ -1,0 +1,171 @@
+<div class="container">
+    <div class="header">
+        <p> Search Criteria </p>
+    </div>
+    <form class="needs-validation" [formGroup]="searchCriteriaFormGroup" (ngSubmit)="onSubmit()">
+        <div class="form-row">
+
+            <!-- Party Number -->
+            <div class="col-md-4 mb-3">
+                <label for="partyNumber" class="lable">Party Number:</label>
+                <input type="text" class="form-control" id="partyNumber" placeholder="Party Number"
+                    formControlName="partyNumberControl">
+            </div>
+
+            <!-- Party ID -->
+            <div class="col-md-4 mb-3">
+                <label for="partyId" class="lable">Party ID:</label>
+                <input type="text" class="form-control" id="partyId" placeholder="Party ID"
+                    formControlName="partyIdControl">
+            </div>
+
+            <!-- Party Residency -->
+            <div class="col-md-4 mb-3">
+                <label for="partyResidency" class="lable">Party Residency:</label>
+                <input type="text" class="form-control" id="partyResidency" placeholder="Party Residency"
+                    formControlName="partyResidencyControl">
+            </div>
+        </div>
+
+        <div class="form-row">
+
+            <!-- Party Name -->
+            <div class="col-md-4 mb-3">
+                <label for="partyName" class="lable">Party Name:</label>
+                <input type="text" class="form-control" id="partyName" placeholder="Party Name"
+                    formControlName="partyNameControl">
+            </div>
+
+            <!-- Party Nationality -->
+            <div class="col-md-4 mb-3">
+                <label for="partyNationality" class="lable">Party Nationality:</label>
+                <input type="text" class="form-control" id="partyNationality" placeholder="Party Nationality"
+                    formControlName="partyNationalityControl">
+            </div>
+        </div>
+
+        <hr class="hr">
+            <!-- Submit Button -->
+            <div>
+                <button mat-raised-button type="submit" class="submit-btn">
+                    <mat-icon>arrow_circle_down</mat-icon>
+                    Search
+                </button>
+                <!-- Clear Button -->
+                <button mat-raised-button 
+                        type="button" 
+                        class="clear-btn"
+                        (click) = "onClear()">
+                    <mat-icon>arrow_circle_down</mat-icon>
+                             Clear
+                </button>
+            </div>
+
+    </form>
+</div>
+<br>
+<br>
+<div class="container">
+
+    <!-- Header Part -->
+    <div class="header">
+      <p> Results </p>
+    </div>
+  
+    <!-- Filter Part -->
+    <div class="filter-search">
+      <mat-form-field>
+        <mat-label>Filter Search Criteria</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Ahmed" #input>
+      </mat-form-field>
+    </div>
+      
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+      
+      <!-- partyNumber Column -->
+      <ng-container matColumnDef="partyNumber">
+        <th mat-header-cell *matHeaderCellDef>Party Number </th>
+        <td mat-cell *matCellDef="let element"> {{element.partyNumber}} </td>
+      </ng-container>
+  
+      <!-- partyName Column -->
+      <ng-container matColumnDef="partyName">
+        <th mat-header-cell *matHeaderCellDef> Party Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.partyName}} </td>
+      </ng-container>
+  
+      <!-- partyId Column -->
+      <ng-container matColumnDef="partyId">
+        <th mat-header-cell *matHeaderCellDef> Party ID </th>
+        <td mat-cell *matCellDef="let element"> {{element.partyKey}} </td>
+      </ng-container>
+  
+      <!-- partyNationality Column -->
+      <ng-container matColumnDef="partyNationality">
+        <th mat-header-cell *matHeaderCellDef> Party Nationality </th>
+        <td mat-cell *matCellDef="let element"> {{element.nationality}} </td>
+      </ng-container>
+  
+      <!-- partyResidency Column -->
+      <ng-container matColumnDef="partyResidency">
+        <th mat-header-cell *matHeaderCellDef> Party Residency </th>
+        <td mat-cell *matCellDef="let element"> {{element.residenceCountryName}} </td>
+      </ng-container>
+      <ng-container matColumnDef="rating">
+        <th mat-header-cell *matHeaderCellDef>  Rate </th>
+        <td mat-cell *matCellDef="let element"> {{element.riskRating}} </td>
+      </ng-container>
+      
+      <!-- rating Column -->
+      <ng-container matColumnDef="editrating">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Edit Rating </th>
+        <td mat-cell *matCellDef="let row">
+          
+ <app-select-rating-scale [elementRate]="row.ratingValue" (changeRateEvent)="calculateRating($event);;row.ratingValue=$event"></app-select-rating-scale>
+      
+
+        </td>
+      </ng-container>
+      <!--  -->
+      <ng-container matColumnDef="save">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Save  </th>
+        <td mat-cell *matCellDef="let row">
+          
+      
+
+          <button mat-icon-button color="primary" aria-label="Example icon button with a vertical three dot icon" (click)="editPartyRating(row)">
+            <mat-icon>save</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+  
+		     <!-- Display Element -->
+      <ng-container matColumnDef="displayElement">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Display Element  </th>
+        <td mat-cell *matCellDef="let row;let index=index">
+          <button mat-icon-button color="primary" (click)="openDialogToDisplayElement(row)">
+            <mat-icon>open_in_new</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="kyc">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> KYC  </th>
+        <td mat-cell *matCellDef="let row;let index=index">
+          <button mat-icon-button color="primary" (click)="openKYC(row)">
+            <mat-icon>edit</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  
+    </table>
+  
+    <mat-paginator  #MatPaginator1="matPaginator" (page)="pageEvent = getServerData($event)" 
+                    [pageSizeOptions]="pageSizes"
+                    [length]="resultsLength"
+                    showFirstLastButtons></mat-paginator>
+  
+  </div>
+
+

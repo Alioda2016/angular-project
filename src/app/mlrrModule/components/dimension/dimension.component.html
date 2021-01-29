@@ -1,0 +1,128 @@
+<div class="container">
+  <div>
+    <button (click)="openForm()"
+            mat-raised-button color="primary">Add New Dimension
+    </button>
+  </div>
+  <div>
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Filter" (keyup)="applyFilter($event)" #input>
+    </mat-form-field>
+  </div>
+
+<div>
+  <mat-table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Name</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="weight">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Weight</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.weight}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="sourceColumn">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Column Name</mat-header-cell>
+
+      <mat-cell *matCellDef="let row">
+        {{row.sourceColumn}}
+
+      </mat-cell>
+    </ng-container>
+    <!---->
+    <ng-container matColumnDef="description">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Description</mat-header-cell>
+      <mat-cell *matCellDef="let row">
+        {{row.description}}
+      </mat-cell>
+    </ng-container>
+<!---->
+    <ng-container matColumnDef="individual">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Individual</mat-header-cell>
+      <mat-cell *matCellDef="let row">
+        <mat-checkbox [(ngModel)]="row.individual" [checked]="row.individual"></mat-checkbox>
+      </mat-cell>
+    </ng-container>
+<!--    -->
+
+
+    <ng-container matColumnDef="organization">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Organization</mat-header-cell>
+      <mat-cell *matCellDef="let row">
+        <mat-checkbox [(ngModel)]="row.organization" [checked]="row.organization"></mat-checkbox>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="update">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> Update Type</th>
+      <td mat-cell *matCellDef="let row;let index=index">
+        <button mat-icon-button (click)="UpdateDimensionType(row, index)">
+          <mat-icon color="primary">edit</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="enable">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Enable/Disable</mat-header-cell>
+      <mat-cell *matCellDef="let row">
+        <button
+          mat-raised-button
+          color="warn"
+          *ngIf="disabled(row)"
+          (click)="changeActivity(row)">
+          Disable
+        </button>
+        <button
+          mat-raised-button
+          color="primary"
+          *ngIf="!disabled(row)"
+          (click)="changeActivity(row)">
+          Enable
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="display">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Display Elements</mat-header-cell>
+      <mat-cell *matCellDef="let row">
+        <button mat-icon-button
+                (click)="displayElements(row)">
+          <mat-icon>open_in_new</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="edit">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Update Dimension</mat-header-cell>
+      <mat-cell *matCellDef="let row;let index=index">
+        <button mat-icon-button (click)="updateDimension(row, index)">
+          <mat-icon>edit</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Delete">
+      <mat-header-cell *matHeaderCellDef mat-sort-header> Delete</mat-header-cell>
+      <mat-cell *matCellDef="let row;let index=index">
+        <button mat-icon-button (click)="deleteDimension(row, index)">
+          <mat-icon color="warn">delete</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns" style="background: gray;"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;">
+    </mat-row>
+
+    <tr class="mat-row" *matNoDataRow>
+      <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+    </tr>
+  </mat-table>
+</div>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+</div>
+
+

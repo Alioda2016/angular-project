@@ -1,0 +1,54 @@
+<h3 mat-dialog-title> Add New Element:</h3>
+{{emptyInstance.rate}}
+<div mat-dialog-content>
+  <form class="example-form" #elementForm="ngForm">
+
+    <div>
+      <mat-form-field class="full-width">
+        <input matInput [(ngModel)]="emptyInstance.value" name="value" placeholder=" Name">
+      </mat-form-field>
+    </div>
+    <div>
+      <!--      <mat-form-field class="full-width">-->
+      <!--        <input matInput ngModel name="rate" placeholder=" Rate" type="number">-->
+      <!--      </mat-form-field>-->
+      <app-select-rating-scale  [elementRate]="emptyInstance.rate" (changeRateEvent)="emptyInstance.rate=$event"></app-select-rating-scale>
+
+    </div>
+<!--    <div>-->
+<!--      <mat-checkbox class="example-margin" name="individual" [ngModel]="emptyInstance.individual">Individual-->
+<!--      </mat-checkbox>-->
+
+<!--    </div>-->
+<!--    <div>-->
+<!--      <mat-checkbox class="example-margin" name="organization" [ngModel]="emptyInstance.organization">Organization-->
+<!--      </mat-checkbox>-->
+
+<!--    </div>-->
+<!--    <div>-->
+<!--      <mat-checkbox class="example-margin" name="countable" [(ngModel)]="checked">Countable</mat-checkbox>-->
+
+<!--    </div>-->
+<!--    <ng-container *ngIf="checked">-->
+<!--      <div>-->
+<!--        <mat-form-field class="full-width">-->
+<!--          <input matInput [ngModel]="emptyInstance.threshold" name="threshold" type="number" placeholder="Threshold">-->
+<!--        </mat-form-field>-->
+<!--      </div>-->
+<!--      <div>-->
+<!--        <mat-form-field class="full-width">-->
+<!--          <input matInput [ngModel]="emptyInstance.operator" name="operator" placeholder="Operator">-->
+<!--        </mat-form-field>-->
+<!--      </div>-->
+<!--    </ng-container>-->
+
+  </form>
+</div>
+
+<div mat-dialog-actions class="actions-bar">
+  <button mat-flat-button color="primary" (click)="addElement()"
+          cdkFocusInitial>Ok
+  </button>
+  <button mat-flat-button (click)="onNoClick()">Cancel</button>
+
+</div>

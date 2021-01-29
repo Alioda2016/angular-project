@@ -1,0 +1,60 @@
+<app-loader></app-loader>
+<div class="bodyContainer">
+
+  <div class="container">
+    <div class="ks-page">
+      <div class="ks-page-content">
+        <div class="ks-logo">
+          <img alt="DataGear Anti-Money Laundering" id="logo" src="assets/images/login.png">
+        </div>
+
+        <div class="card panel panel-default ks-light ks-panel ks-login animated flipInX">
+          <div class="card-block">
+
+
+            <div [formGroup]="loginControl">
+              <p>
+
+                <mat-form-field class="full-width">
+                  <input formControlName="username" matInput placeholder="user name">
+                  <ng-container
+                    *ngIf="loginControl?.controls?.username?.touched&&loginControl?.controls?.username?.errors?.required">
+                    <mat-error>
+                      User name is required
+                    </mat-error>
+                  </ng-container>
+                </mat-form-field>
+              </p>
+              <p>
+                <mat-form-field class="full-width">
+                  <input formControlName="password" matInput placeholder="password">
+                  <ng-container
+                    *ngIf="loginControl?.controls?.password?.touched&&loginControl?.controls?.password?.errors?.required">
+                    <mat-error>
+                      Password is required
+                    </mat-error>
+                  </ng-container>
+                </mat-form-field>
+              </p>
+
+              <div class="form-group">
+                <!--               class="btn btn-primary btn-block" -->
+                <button (click)="signIn()" [disabled]="loginControl.invalid" color="primary" mat-raised-button>Login
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="ks-footer">
+        <div class="ks-logo">
+          <img alt="DataGear Anti-Money Laundering" src="assets/images/login-logo.png">
+        </div>
+        <span class="ks-copyright">&copy; Copyright © 2019 - DataGear MLRR.</span>
+      </div>
+    </div>
+  </div>
+</div>
